@@ -1,0 +1,81 @@
+#define NOP 00000
+#define MOV 00001
+#define ADD 00010
+#define ADDI 00011
+#define INC 00100
+#define MIN 00101
+#define MINI 00110
+#define DEC 00111
+#define MUT 01000
+#define MUTI 01001
+#define DIV 01010
+#define DIVI 01011
+#define SLA 01100
+#define SRA 01101
+#define AND 01110
+#define ANDI 01111
+#define OR 10000
+#define ORI 10001
+#define NOR 10010
+#define XOR 10011
+#define LOD 10100
+#define STE 10101
+#define WRT 10110
+#define SWP 10111
+#define BRH 11000
+#define BEQ 11001
+#define BNE 11010
+#define INT 11011
+
+
+#define $R0 00000
+#define $R1 00001
+#define $R2 00010
+#define $R3 00011
+#define $R4 00100
+#define $R5 00101
+#define $R6 00110
+#define $R7 00111
+#define $R8 01000
+#define $R9 01001
+#define $R10 01010
+#define $R11 01011
+#define $R12 01100
+#define $R13 01101
+#define $R14 01110
+#define $R15 01111
+#define $R16 10000
+#define $R17 10001
+#define $R18 10010
+#define $R19 10011
+#define $R20 10100
+#define $R21 10101
+#define $R22 10110
+#define $R23 10111
+#define $R24 11000
+#define $R25 11001
+#define $R26 11010
+#define $R27 11011
+#define $R28 11100
+#define $R29 11101
+#define $R30 11110
+#define $R31 11111
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+BEQ $R12,$R15,31
+
+

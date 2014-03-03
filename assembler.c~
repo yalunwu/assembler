@@ -1,0 +1,111 @@
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+
+int main(){
+	ifstream input("IS2.asm");
+	ofstream output("output.asm");
+	string temp,tempOP;
+	while(getline(input,temp)){
+		if(temp.size()!=0){
+			//cout<<temp<<endl;
+			string delimiters = " ,";
+			size_t current;
+			size_t next = -1;
+			string tempOut;
+			do
+			{
+				current = next + 1;
+				next = temp.find_first_of( delimiters, current );
+				tempOP=temp.substr( current, next - current );
+				bool onlyNum = true;
+				for(int i = 0;i<tempOP.size();i++){
+					if((tempOP[i] < '0' || tempOP[i] > '9' ) ){
+						onlyNum = false;break;
+					}						
+				}
+					
+				if(onlyNum){
+					;
+					
+				}else{
+				switch(tempOP){
+					case "NOP":	tempOP="00000";break;
+					case "MOV":	tempOP="00001";break;
+					case "ADD":	tempOP="00010";break;
+					case "ADDI":tempOP="00011";break;
+					case "INC":	tempOP="00100";break;
+					case "MIN":	tempOP="00101";break;
+					case "MINI":tempOP="00110";break;
+					case "DEC":	tempOP="00111";break;
+					case "MUT":	tempOP="01000";break;
+					case "MUTI":tempOP="01001";break;
+					case "DIV":	tempOP="01010";break;
+					case "DIVI":tempOP="01011";break;
+					case "SLA":	tempOP="01100";break;
+					case "SRA":	tempOP="01101";break;
+					case "AND":	tempOP="01110";break;
+					case "ANDI":tempOP="01111";break;
+					case "OR":	tempOP="10000";break;
+					case "ORI":	tempOP="10001";break;
+					case "NOR":	tempOP="10010";break;
+					case "XOR":	tempOP="10011";break;
+					case "LOD":	tempOP="10100";break;
+					case "STE":	tempOP="10101";break;
+					case "WRT":	tempOP="10110";break;
+					case "SWP":	tempOP="10111";break;
+					case "BRH":	tempOP="11000";break;
+					case "BEQ":	tempOP="11001";break;
+					case "BNE":	tempOP="11010";break;
+					case "INT":	tempOP="11011";break;	
+					case "$00":	tempOP="00000";break;
+					case "$01":	tempOP="00001";break;
+					case "$02":	tempOP="00010";break;
+					case "$03": tempOP="00011";break;
+					case "$04":	tempOP="00100";break;
+					case "$05":	tempOP="00101";break;
+					case "$06": tempOP="00110";break;
+					case "$07":	tempOP="00111";break;
+					case "$08":	tempOP="01000";break;
+					case "$09": tempOP="01001";break;
+					case "$10":	tempOP="01010";break;
+					case "$11": tempOP="01011";break;
+					case "$12":	tempOP="01100";break;
+					case "$13":	tempOP="01101";break;
+					case "$14":	tempOP="01110";break;
+					case "$15": tempOP="01111";break;
+					case "$16":	tempOP="10000";break;
+					case "$17":	tempOP="10001";break;
+					case "$18":	tempOP="10010";break;
+					case "$19":	tempOP="10011";break;
+					case "$20":	tempOP="10100";break;
+					case "$21":	tempOP="10101";break;
+					case "$22":	tempOP="10110";break;
+					case "$23":	tempOP="10111";break;
+					case "$24":	tempOP="11000";break;
+					case "$25":	tempOP="11001";break;
+					case "$26":	tempOP="11010";break;
+					case "$27":	tempOP="11011";break;
+					case "$28":	tempOP="11100";break;
+					case "$29":	tempOP="11101";break;
+					case "$30":	tempOP="11110";break;
+					case "$31":	tempOP="11111";break;
+
+					default:cout<<"unable to decode"<<tempOP<<endl;return -1;
+				 }
+				}	
+			}
+			while (next != string::npos);
+		}
+	}
+
+	
+	
+	
+	printf("it worked?\n");
+
+	return 0;
+}
+

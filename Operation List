@@ -1,0 +1,60 @@
+Op 		OpCode		Input						Description
+
+NOP 	00000 		None 						No Operation
+
+MOV 	00001 		Register A,B    			Move Data between registers A=B,B=A
+
+ADD 	00010 		Register A,B    			ADD B = A+B
+
+ADDI 	00011 		Register address, Value 	ADD Immediate reg = reg+val
+
+INC 	00100 		Register address 			Increment
+
+MIN 	00101 		Register A,B    			Minus B = B-A
+
+MINI 	00110 		Register address, Value 	Minus Immediate reg = reg-val
+
+DEC 	00111 		Register address 			Decrement
+
+MUT 	01000 		Register A,B    			Multiply B = A*B
+
+MUTI 	01001 		Register address, Value 	Multiply Immediate reg = reg*val
+
+DIV 	01010 		Register A,B    			Divide B = A*B
+
+DIVI 	01011 		Register address, Value 	Divide Immediate reg = reg*val
+
+SLA 	01100 		Register address 			Shift left
+
+SRA 	01101 		Register address 			Shift right 
+
+AND 	01110 		Register A,B    			And B = A&B
+
+ANDI 	01111 		Register address, Value 	And Immediate reg = reg&val
+
+OR 		10000 		Register A,B    			Or B = A|B
+
+ORI 	10001 		Register address, Value 	Or Immediate reg = reg&val
+
+NOR 	10010 		Register A,B    			Nor B = ~(A|B)
+
+NOT 	10011 		Register Address 			Not Reg = ~Reg
+
+XOR 	10100 		Register A,B    			Xor B = A⊗B
+
+LOD 	10101 		Register A,B 				Load From value from Address in Register B to Register A
+
+STE 	10110 		Register A,B 				Store value from Register A into Address in Register B
+
+WRT 	10111 		Register address,value 		Write Value to Register
+
+SWP 	11000 		Register A,B    			Swap
+
+BRH 	11001 		Register   	 				Unconditional Branch to the location in Register 
+
+BEQ 	11010 		3 registers 	 			Branch to the location in register 3 if equal
+
+BNE 	11011 		3 Register 		 			Branch to the location in register 3 if not equal 
+
+INT 	11100 		Interrupt value 			Interrrupt
+

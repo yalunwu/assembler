@@ -10,9 +10,9 @@ ADDI 	00011 		Register address, Value 	ADD Immediate reg = reg+val
 
 INC 	00100 		Register address 			Increment
 
-MIN 	00101 		Register A,B    			Minus B = B-A
+SUB	  00101 		Register A,B    			Minus B = B-A
 
-MINI 	00110 		Register address, Value 	Minus Immediate reg = reg-val
+SUBI 	00110 		Register address, Value 	Minus Immediate reg = reg-val
 
 DEC 	00111 		Register address 			Decrement
 

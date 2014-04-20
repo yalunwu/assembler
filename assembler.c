@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <fstream>
 #include <istream>
@@ -365,11 +364,11 @@ int main(int argc, char *argv[])
             {
                 tempOut = Reg("00100", listStr);
             }
-            else if (tempOP == "MIN")
+            else if (tempOP == "SUB")
             {
                 tempOut = RegReg("00101", listStr);
             }
-            else if (tempOP == "MINI")
+            else if (tempOP == "SUBI")
             {
                 tempOut = RegVal("00110", listStr);
             }

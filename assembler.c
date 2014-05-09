@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <fstream>
 #include <istream>
@@ -172,7 +173,7 @@ string reg2bin(string input)
     }
     else
     {
-        cout << "error input in reg2bin "<< "in line "<<lineCounter << endl;
+        cout << "error input in reg2bin "<< "in line "<<lineCounter << " with:"<<input<<endl;
         throw - 7;
     }
     return input;
@@ -195,12 +196,12 @@ string dec2bin(string input)
     {
         if (DECNumber % 2 == 0)
         {
-            bin = bin + string("0");
+            bin = string("0") + bin;
 
         }
         else
         {
-            bin = bin + string("1");
+            bin = string("1") + bin;
 
         }
         DECNumber = DECNumber / 2;
@@ -364,11 +365,11 @@ int main(int argc, char *argv[])
             {
                 tempOut = Reg("00100", listStr);
             }
-            else if (tempOP == "SUB")
+            else if (tempOP == "MIN")
             {
                 tempOut = RegReg("00101", listStr);
             }
-            else if (tempOP == "SUBI")
+            else if (tempOP == "MINI")
             {
                 tempOut = RegVal("00110", listStr);
             }
@@ -459,6 +460,14 @@ int main(int argc, char *argv[])
             else if (tempOP == "INT")
             {
                 tempOut = NOP("11100");
+            }
+            else if(tempOP  == "BGE")
+            {
+                tempOut = RegRegReg("11101", listStr);
+            }
+            else if (tempOP == "BLE")
+            {
+                tempOut = RegRegReg("11110", listStr);
             }
             else
             {

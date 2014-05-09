@@ -10,9 +10,9 @@ ADDI 	00011 		Register address, Value 	ADD Immediate reg = reg+val
 
 INC 	00100 		Register address 			Increment
 
-SUB	  00101 		Register A,B    			Minus B = B-A
+MIN 	00101 		Register A,B    			Minus B = B-A
 
-SUBI 	00110 		Register address, Value 	Minus Immediate reg = reg-val
+MINI 	00110 		Register address, Value 	Minus Immediate reg = reg-val
 
 DEC 	00111 		Register address 			Decrement
 
@@ -58,3 +58,6 @@ BNE 	11011 		3 Register 		 			Branch to the location in register 3 if not equal
 
 INT 	11100 		Interrupt value 			Interrrupt
 
+BGT		11101		3 registers 				Brance if reg1 is greater than reg2 )
+
+BLE		11110		3 registers					Branch if reg1 is less than reg2 

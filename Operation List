@@ -58,6 +58,6 @@ BNE 	11011 		3 Register 		 			Branch to the location in register 3 if not equal
 
 INT 	11100 		Interrupt value 			Interrrupt
 
-BGT		11101		3 registers 				Brance if reg1 is greater than reg2 )
+BGT		11101		3 registers 				Brance to the location in register 3 if reg1 is greater than reg2 
 
-BLE		11110		3 registers					Branch if reg1 is less than reg2 
+BLE		11110		3 registers					Branch to the location in register 3 if reg1 is less than reg2 
